@@ -49,3 +49,18 @@ function union(_first: number | string, _second: number | string) {
 
 union(1, 1);
 union("Hello", " World");
+
+//type alias
+type combinaion = number | string;
+
+function unionWithCombineType(_first: combinaion, _second: combinaion) {
+  if (typeof _first === "number" && typeof _second === "number") {
+    console.log(_first + _second);
+  } else if (typeof _first === "string" && typeof _second === "string") {
+    console.log(_first + _second);
+  } else {
+    console.log("Put identical input types");
+  }
+}
+unionWithCombineType(1, 1);
+unionWithCombineType("Hello", " World");
