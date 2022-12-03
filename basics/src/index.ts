@@ -27,3 +27,25 @@ const person: {
 };
 
 console.log(person);
+
+//enum types
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
+}
+
+console.log(Role.READ_ONLY);
+
+function union(_first: number | string, _second: number | string) {
+  if (typeof _first === "number" && typeof _second === "number") {
+    console.log(_first + _second);
+  } else if (typeof _first === "string" && typeof _second === "string") {
+    console.log(_first + _second);
+  } else {
+    console.log("Put identical input types");
+  }
+}
+
+union(1, 1);
+union("Hello", " World");
