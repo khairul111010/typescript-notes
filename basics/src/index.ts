@@ -85,12 +85,12 @@ if (typeof input === "string") {
 
 //never type
 //the name literally describes that this never returns anything
-function generateError(message: string, code: number): never {
-  throw { message: message, errorCode: code };
-  //   return code;
-}
-const res = generateError("ERROP", 404);
-console.log(res);
+// function generateError(message: string, code: number): never {
+//   throw { message: message, errorCode: code };
+//   //   return code;
+// }
+// const res = generateError("ERROP", 404);
+// console.log(res);
 
 //accumulate with unknown term'th number using spead operator
 const addNumbers = (...numbers: number[]) => {
@@ -101,3 +101,8 @@ const addNumbers = (...numbers: number[]) => {
 
 const accumulatedResult = addNumbers(1 + 2 + 3);
 console.log(accumulatedResult);
+
+//Array Destructuring
+const fruites = ["Apple", "Banana"];
+const [_firstFruit, _secondFruit] = fruites;
+console.log(_firstFruit);
