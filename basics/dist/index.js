@@ -81,3 +81,11 @@ function generateError(message, code) {
 }
 const res = generateError("ERROP", 404);
 console.log(res);
+//accumulate with unknown term'th number using spead operator
+const addNumbers = (...numbers) => {
+    return numbers.reduce((currentResult, currentValue) => {
+        return currentResult + currentValue;
+    });
+};
+const accumulatedResult = addNumbers(1 + 2 + 3);
+console.log(accumulatedResult);
