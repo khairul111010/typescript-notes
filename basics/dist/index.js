@@ -73,3 +73,11 @@ if (typeof input === "string") {
 else {
     console.log("not OK");
 }
+//never type
+//the name literally describes that this never returns anything
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+    //   return code;
+}
+const res = generateError("ERROP", 404);
+console.log(res);
