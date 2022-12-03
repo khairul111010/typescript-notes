@@ -28,6 +28,7 @@ var Role;
     Role[Role["AUTHOR"] = 2] = "AUTHOR";
 })(Role || (Role = {}));
 console.log(Role.READ_ONLY);
+//union types
 function union(_first, _second) {
     if (typeof _first === "number" && typeof _second === "number") {
         console.log(_first + _second);
@@ -54,3 +55,21 @@ function unionWithCombineType(_first, _second) {
 }
 unionWithCombineType(1, 1);
 unionWithCombineType("Hello", " World");
+//using callbacks
+function addWithCallback(_first, _second, cb) {
+    const res = _first + _second;
+    cb(res);
+}
+addWithCallback(10, 20, (res) => {
+    console.log(res);
+});
+//unknown types
+// this is better than any because it checks whether it has a type or not
+let input;
+input = "hi";
+if (typeof input === "string") {
+    console.log("ok");
+}
+else {
+    console.log("not OK");
+}
