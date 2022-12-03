@@ -12,3 +12,11 @@ function add(n1, n2, showResult, phrase) {
     }
 }
 add(5, 4, false, "Result: ");
+//object types
+const person = {
+    name: "test name",
+    age: 45,
+    hobies: ["playing", "drawing"],
+    role: [1, "admin"],
+};
+console.log(person);
